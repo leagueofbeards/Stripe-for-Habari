@@ -1,4 +1,4 @@
-Stripe for Habari
+Stripe Products for Habari
 =================
 
 Integrate Stripe into your Habari Site. Requires our [Common] plugin, the [Stripe] PHP API and the [Tpyo S3] class.

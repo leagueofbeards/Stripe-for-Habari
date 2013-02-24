@@ -76,6 +76,11 @@ class ProductsPlugin extends Plugin
 		DB::dbdelta( $sql );
 	}
 
+	public function filter_autoload_dirs($dirs) {
+		$dirs[] = __DIR__ . '/classes';
+		return $dirs;
+	}
+
 	private function create($product) {
 		$s3 = new S3( KEY, SEKRET );
 		$bucket = $s3->putBucket( $product->slug, S3::ACL_AUTHENTICATED_READ );
